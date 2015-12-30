@@ -8,7 +8,10 @@ SVGPathNormalizer will create an object that handle normalize path (of path, lin
 git clone https://github.com/trinketmage/SVGPathNormalizer.git SVGPathNormalizer
 ```
 
-## TODO 
+## DEMO
 
-* Base getPathLength
-* Normalize PathLength
+*With TweenMax
+
+```shell
+http://trinketmage.free.fr/factory/SVGPathNormalizer/example/
+```

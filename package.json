@@ -4,30 +4,26 @@
     "version": "0.1.2",
     "description": "SVG Path animation",
     "homepage": "https://github.com/trinketmage/SVGPathNormalizer",
-	"main": "./src/SVGPathNormalizer.js",
+    "main": "./src/SVGPathNormalizer.js",
     "keywords": [
-       "animation",
-	   "SVG",
-	   "TweenMax",
-	   "TimelineMax",
-	   "GSAP",
-	   "DrawSVG"
-   ],
-   "maintainers": [
-       {
-           "name": "Tran Rémi",
-		   "email": "tranremi@live.fr",
-           "web": "http://trinketmage.free.fr" 
-       } 
-   ],
-   "repositories": [
-       {
-           "type": "git",
-           "url": "https://github.com/trinketmage/SVGPathNormalizer" 
-       } 
-   ],
-    "ignore":[
-      "example/"
+        "animation",
+        "SVG",
+        "TweenMax",
+        "TimelineMax",
+        "GSAP",
+        "DrawSVG"
+    ],
+    "maintainers": [{
+        "name": "Tran Rémi",
+        "email": "tranremi@live.fr",
+        "web": "http://trinketmage.free.fr"
+    }],
+    "repositories": [{
+        "type": "git",
+        "url": "https://github.com/trinketmage/SVGPathNormalizer"
+    }],
+    "ignore": [
+        "example/"
     ]
 
 }
