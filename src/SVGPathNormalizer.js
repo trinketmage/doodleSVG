@@ -69,6 +69,7 @@ PathNormalized = function(el, pathLength)
 	this.end = this.pathLength;
 	this.origin = 0;
 	this.path = this.origin+"px, "+this.end+"px";
+	// this.dom.style.strokeDashoffset = this.pathLength+"px";
 };
 
 PathNormalized.prototype.drawPath = function(origin)
