@@ -1,19 +1,17 @@
 {
-  "name": "SVGPathNormalizer",
-  "homepage": "https://github.com/trinketmage/SVGPathNormalizer",
-  "version": "0.1.1",
-  "_release": "0.1.1",
-  "_resolution": {
-    "type": "version",
-    "tag": "0.1.1",
-    "commit": "b5d13e43d51e17ab4834c84480531a1f70baa0d3"
-  },
-  "_source": "git://github.com/trinketmage/SVGPathNormalizer.git",
-  "_target": "0.1.1",
-  "_originalSource": "SVGPathNormalizer",
-  "ignore":
-  [
-  	"example/",
-  	"example/*"
-  ]
+    "name": "SVGPathNormalizer",
+    "version": "0.1.1",
+    "description": "SVG Path animation",
+    "author": {
+        "name": "Tran Rémi"
+    },
+    "main": "./src/SVGPathNormalizer.js",
+    "dependencies": {
+
+    },
+	"ignore":
+	[
+		"example/",
+		"example/*"
+	]
 }
