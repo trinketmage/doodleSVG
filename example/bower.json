@@ -3,6 +3,6 @@
   "version": "0.0.0",
   "dependencies": {
     "greensock": "1.13.2",
-    "SVGPathNormalizer": "0.1.1"
+    "SVGPathNormalizer": "0.1.2"
   }
 }
