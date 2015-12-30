@@ -10,7 +10,7 @@ git clone https://github.com/trinketmage/SVGPathNormalizer.git SVGPathNormalizer
 
 ## DEMO
 
-*With TweenMax
+* With TweenMax
 
 ```shell
 http://trinketmage.free.fr/factory/SVGPathNormalizer/example/
