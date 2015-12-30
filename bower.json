@@ -2,4 +2,7 @@
   "name": "SVGPathNormalizer",
   "description": "JavaScript library to make normalize path on SVG for animation purpose",
   "main": "src/SVGPathNormalizer.js",
+  "ignore": [
+    "example/"
+  ]
 }
