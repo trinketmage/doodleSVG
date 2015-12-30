@@ -1,6 +1,6 @@
 # SVGPathNormalizer
 
-SVGPathNormalizer will create an object that handle normalize path (for path, line, circle, rect, ellipse and polygon) from 0 to 1, for animation purpose.
+SVGPathNormalizer purpose is to create an object that handle normalize path (for path, line, circle, rect, ellipse and polygon) from 0 to 1, for animation purpose. It can be use with any tween engine. 
 
 ## DEMO
 
