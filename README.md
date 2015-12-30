@@ -1,10 +1,10 @@
 # SVGPathNormalizer
 
-SVGPathNormalizer will create an object that handle normalize path (of path, line, circle, rect and polygon) from 0 to 1, for animation purpose.
+SVGPathNormalizer will create an object that handle normalize path (for path, line, circle, rect, ellipse and polygon) from 0 to 1, for animation purpose.
 
 ## DEMO
 
-1. [TweenMax](http://trinketmage.free.fr/factory/SVGPathNormalizer/example/)
+1. [Animate with TweenMax](http://trinketmage.free.fr/factory/SVGPathNormalizer/example/)
 
 ## Usage
 
@@ -25,7 +25,7 @@ var newObj = SPN.normalize(el);
 TweenMax.to(newObj, 5, {origin: 1});
 ```
 
-* Animate multiple elements
+* Animate a list of elements
 ```js
 var SPN = new SVGPathNormalizer();
 
