@@ -1,7 +1,7 @@
 {
     "name": "SVGPathNormalizer",
     "filename": "SVGPathNormalizer.js",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "SVG Path animation",
     "homepage": "https://github.com/trinketmage/SVGPathNormalizer",
 	"main": "./src/SVGPathNormalizer.js",
