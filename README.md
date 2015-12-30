@@ -2,6 +2,10 @@
 
 SVGPathNormalizer is a javascript tool, its purpose is to create an object that handle normalize path (for path, line, circle, rect, ellipse and polygon) from 0 to 1, for drawing line animation purpose. It can be use with any tween engine. 
 
+* Inspired by
+[Vivus by maxwellito](https://github.com/maxwellito/vivus)
+[DrawSVGPlugin by Greensock](http://greensock.com/drawSVG)
+
 ## DEMO
 
 1. [Animate with TweenMax](http://trinketmage.free.fr/factory/SVGPathNormalizer/example/)
