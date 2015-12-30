@@ -25,6 +25,9 @@
            "type": "git",
            "url": "https://github.com/trinketmage/SVGPathNormalizer" 
        } 
-   ]
+   ],
+    "ignore":[
+      "example/"
+    ]
 
 }
