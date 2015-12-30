@@ -13,7 +13,7 @@
   "_originalSource": "SVGPathNormalizer",
   "ignore":
   [
-  	"example/"
+  	"example/",
   	"example/*"
   ]
 }
