@@ -8,5 +8,8 @@
     "main": "./src/SVGPathNormalizer.js",
     "dependencies": {
 
-    }
+    },
+    "ignore":[
+      "example/"
+    ]
 }
