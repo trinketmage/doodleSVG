@@ -26,8 +26,8 @@ var SPN = new SVGPathNormalizer();
 var el = document.querySelector("path");
 var newObj = SPN.normalize(el);
 
-// Default value for origin is 0.
-TweenMax.to(newObj, 5, {origin: 1});
+// Default value for end is 0.
+TweenMax.to(newObj, 5, {end: 1});
 ```
 
 * Animate a list of elements
@@ -37,6 +37,6 @@ var SPN = new SVGPathNormalizer();
 var list = document.querySelectorAll("rect");
 var newObjArray = SPN.normalizeGroup(list);
 
-// Default value for origin is 0.
-TweenMax.to(newObjArray, 5, {origin: 1});
+// Default value for end is 0.
+TweenMax.to(newObjArray, 5, {end: 1});
 ```
