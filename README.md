@@ -20,24 +20,26 @@ git clone https://github.com/trinketmage/doodleSVG.git doodleSVG
 
 ## How to
 
+You can play with origin and end of each return iteration to do your desire doodle.
+
 * Animate one element
 ```js
-var SPN = new doodleSVG();
+var doodle = new doodleSVG();
 
 var el = document.querySelector("path");
-var newObj = SPN.normalize(el);
+var myDoodle = doodle.normalize(el);
 
 // Default value for end is 0.
-TweenMax.to(newObj, 5, {end: 1});
+TweenMax.to(myDoodle, 5, {end: 1});
 ```
 
 * Animate a list of elements
 ```js
-var SPN = new doodleSVG();
+var doodle = new doodleSVG();
 
 var list = document.querySelectorAll("rect");
-var newObjArray = SPN.normalizeGroup(list);
+var myDoodles = doodle.normalizeGroup(list);
 
 // Default value for end is 0.
-TweenMax.to(newObjArray, 5, {end: 1});
+TweenMax.to(myDoodles, 5, {end: 1});
 ```
