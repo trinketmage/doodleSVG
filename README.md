@@ -1,6 +1,6 @@
 # doodleSVG
 
-* developped at BigBossStudio
+* developed at BigBossStudio
 
 doodleSVG is a javascript tool, its purpose is to create objects that handle normalized path (for path, line, circle, rect, ellipse and polygon) from 0 to 1, to easely handle drawing SVG line animation for anytype of SVG object. It can be use with any tween engine. 
 
