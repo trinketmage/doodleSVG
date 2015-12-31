@@ -66,15 +66,20 @@ PathNormalized = function(el, pathLength)
 {
 	this.dom = el;
 	this.pathLength = pathLength;
-	this.end = this.pathLength;
+	this.end = 0;
 	this.origin = 0;
-	this.path = this.origin+"px, "+this.end+"px";
-	// this.dom.style.strokeDashoffset = this.pathLength+"px";
+	this.path = this.pathLength+"px, "+this.pathLength+"px";
+	this.dom.style.strokeDasharray = this.path;
+	this.dom.style.strokeDashoffset = "0px";
 };
 
-PathNormalized.prototype.drawPath = function(origin)
+PathNormalized.prototype.drawOrigin = function(origin)
 {
-	var d = origin+"px, "+this.end+"px";
+	this.dom.style.strokeDashoffset = -(origin*this.pathLength)+"px";
+};
+PathNormalized.prototype.drawEnd = function(end)
+{
+	var d = (this.pathLength*end - this.origin*this.pathLength)+"px, "+this.pathLength+"px";
 	this.dom.style.strokeDasharray = d;
 	this.path = d;
 };
@@ -82,9 +87,18 @@ PathNormalized.prototype.drawPath = function(origin)
 Object.defineProperty(PathNormalized.prototype, "origin",{
     set: function(newVal){
         this._origin = newVal;
-    	this.drawPath(newVal * this.pathLength);
+    	this.drawOrigin(newVal);
     }, 
     get: function(){
     	return this._origin;
+    }
+});
+Object.defineProperty(PathNormalized.prototype, "end",{
+    set: function(newVal){
+        this._end = newVal;
+    	this.drawEnd(newVal);
+    }, 
+    get: function(){
+    	return this._end;
     }
 });

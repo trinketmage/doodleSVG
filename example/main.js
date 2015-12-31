@@ -7,6 +7,6 @@
     var el = document.querySelector("path");
     var newObj = SPN.normalize(el);
 
-    TweenMax.to(newObjArray, 3, {origin: 1, ease:Quint.easeInOut, repeat:-1, yoyo: true, repeatDelay: .3});
-    TweenMax.to(newObj, 3, {origin: 1, ease:Quint.easeInOut, repeat:-1, yoyo: true, repeatDelay: .3});
+    TweenMax.to(newObjArray, 3, {end: 1, ease:Quint.easeInOut, repeat:-1, yoyo: true, repeatDelay: .3});
+    TweenMax.to(newObj, 3, {end: 1, ease:Quint.easeInOut, repeat:-1, yoyo: true, repeatDelay: .3});
 })();
