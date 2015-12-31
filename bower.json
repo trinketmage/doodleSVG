@@ -1,6 +1,6 @@
 {
     "name": "SVGPathNormalizer",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "description": "SVG Path animation",
     "author": {
         "name": "Tran Rémi"
