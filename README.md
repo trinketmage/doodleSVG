@@ -6,6 +6,7 @@ doodleSVG is a javascript tool, its purpose is to create objects that handle nor
 
 * [Vivus by maxwellito](https://github.com/maxwellito/vivus)
 * [DrawSVGPlugin by Greensock](http://greensock.com/drawSVG)
+* [SVGPathConverter by Waest](https://github.com/Waest/SVGPathConverter)
 
 ## Examples
 
