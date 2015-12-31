@@ -9,7 +9,7 @@ doodleSVG is a javascript tool, its purpose is to create objects that handle nor
 
 ## Examples
 
-1. [Animate with TweenMax](http://trinketmage.free.fr/factory/SVGPathNormalizer/example/)
+1. [Animate with TweenMax](http://codepen.io/trinketmage/pen/bEBxqg)
 
 ## Usage
 
