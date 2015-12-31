@@ -1,4 +1,4 @@
-var SVGPathNormalizer = function()
+var doodleSVG = function()
 {
 
 };
@@ -8,7 +8,7 @@ function normalizeArray(a, b, c, d)
     return c = parseFloat(c) - parseFloat(a), d = parseFloat(d) - parseFloat(b), Math.sqrt(c * c + d * d)
 };
 
-SVGPathNormalizer.prototype.normalize = function(el)
+doodleSVG.prototype.normalize = function(el)
 {
     if (!el) return 0;
     var pathLength, BBox, points, normPoints, i, j, k, l, check = el.tagName.toLowerCase();
@@ -34,16 +34,16 @@ SVGPathNormalizer.prototype.normalize = function(el)
     }
     else if ("polyline" === check || "polygon" === check)
     {
-        for (points = el.getAttribute("points").split(", ").join(",").split(" "), pathLength = 0, i = points[0].split(","), "" === points[points.length - 1] && points.pop(), "polygon" === c && (points.push(points[0]), -1 === f[0].indexOf(",") && points.push(points[1])), j = 1; j < points.length; j++)
+        for (points = el.getAttribute("points").split(", ").join(",").split(" "), pathLength = 0, i = points[0].split(","), "" === points[points.length - 1] && points.pop(), "polygon" === check && (points.push(points[0]), -1 === points[0].indexOf(",") && points.push(points[1])), j = 1; j < points.length; j++)
     	{
-    		normPoints = points[j].split(","), 1 === normPoints.length && (normPoints[1] = points[j++]), 2 === h.length && (pathLength += normalizeArray(i[0], i[1], normPoints[0], normPoints[1]) || 0, i = h);
+    		normPoints = points[j].split(","), 1 === normPoints.length && (normPoints[1] = points[j++]), 2 === normPoints.length && (pathLength += normalizeArray(i[0], i[1], normPoints[0], normPoints[1]) || 0, i = normPoints);
     	}
     }
     else "ellipse" === check && (k = parseFloat(el.getAttribute("rx")), l = parseFloat(el.getAttribute("ry")), pathLength = Math.PI * (3 * (k + l) - Math.sqrt((3 * k + l) * (k + 3 * l))));
 
     return new PathNormalized(el, pathLength);
 };
-SVGPathNormalizer.prototype.normalizeGroup = function(domList)
+doodleSVG.prototype.normalizeGroup = function(domList)
 {
 	if (!domList) return 0;
 	else if(typeof(domList) != 'object') return 0;
