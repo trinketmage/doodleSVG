@@ -26,7 +26,7 @@ doodleSVG.prototype.normalize = function(el)
     }
     else if ("circle" === check)
     {	
-    	pathLength = 2 * Math.PI * parseFloat(b.getAttribute("r"));
+    	pathLength = 2 * Math.PI * parseFloat(el.getAttribute("r"));
     }
     else if ("line" === check)
     {
