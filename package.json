@@ -1,29 +1,43 @@
 {
-    "name": "doodleSVG",
-    "filename": "doodleSVG.js",
-    "version": "0.1.5",
-    "description": "SVG Path animation",
-    "homepage": "https://github.com/trinketmage/doodleSVG",
-    "main": "./src/doodleSVG.js",
-    "keywords": [
-        "animation",
-        "SVG",
-        "TweenMax",
-        "TimelineMax",
-        "GSAP",
-        "DrawSVG"
-    ],
-    "maintainers": [{
-        "name": "Tran Rémi",
-        "email": "tranremi@live.fr",
-        "web": "http://trinketmage.free.fr"
-    }],
-    "repositories": [{
-        "type": "git",
-        "url": "https://github.com/trinketmage/doodleSVG"
-    }],
-    "ignore": [
-        "example/"
-    ]
-
+  "name": "doodle-svg",
+  "filename": "doodleSVG.js",
+  "version": "0.1.5",
+  "description": "SVG Path animation",
+  "homepage": "https://github.com/trinketmage/doodleSVG",
+  "main": "./src/doodleSVG.js",
+  "keywords": [
+    "animation",
+    "SVG",
+    "TweenMax",
+    "TimelineMax",
+    "GSAP",
+    "DrawSVG"
+  ],
+  "maintainers": [
+    "Tran Rémi <tranremi@live.fr> (http://trinketmage.free.fr)"
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git+https://github.com/trinketmage/doodleSVG.git"
+    }
+  ],
+  "ignore": [
+    "example/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trinketmage/doodleSVG.git"
+  },
+  "bugs": {
+    "url": "https://github.com/trinketmage/doodleSVG/issues"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Remi Tran <tranremi@live.fr> (https://trinketmage.github.io/)",
+  "license": "ISC"
 }
