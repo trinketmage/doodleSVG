@@ -6,13 +6,13 @@
   } else {
     root.doodleSVG = factory()
   }
-}(this, function() {
-  var doodleSVG = function () {}
-  doodleSVG.prototype.normalizeArray = function (a, b, c, d) {
+})(this, function() {
+  var doodleSVG = function() {}
+  doodleSVG.prototype.normalizeArray = function(a, b, c, d) {
     return (c = parseFloat(c) - parseFloat(a))
   }
 
-  doodleSVG.prototype.normalize = function (el) {
+  doodleSVG.prototype.normalize = function(el) {
     if (!el) return 0
     var pathLength
     var points
@@ -33,57 +33,55 @@
     } else if (check === 'circle') {
       pathLength = 2 * Math.PI * parseFloat(el.getAttribute('r'))
     } else if (check === 'line') {
-      pathLength = this.normalizeArray(
-        el.getAttribute('x1'),
-        el.getAttribute('y1'),
-        el.getAttribute('x2'),
-        el.getAttribute('y2')
-      )
+      let x1 = el.getAttribute('x1')
+      let y1 = el.getAttribute('y1')
+      let x2 = el.getAttribute('x2')
+      let y2 = el.getAttribute('y2')
+      var a = x1 - x2
+      var b = y1 - y2
+      pathLength = Math.sqrt(a * a + b * b)
     } else if (check === 'polyline' || check === 'polygon') {
       for (
         points = el
           .getAttribute('points')
           .split(', ')
           .join(',')
-          .split(' '), pathLength = 0, i = points[0].split(','), points[points.length - 1] ===
-          '' && points.pop(), check === 'polygon' &&
-          (
-            points.push(points[0]),
-            points[0].indexOf(',') === -1 && points.push(points[1])
-          ), j = 1;
+          .split(' '),
+          pathLength = 0,
+          i = points[0].split(','),
+          points[points.length - 1] === '' && points.pop(),
+          check === 'polygon' &&
+            (points.push(points[0]),
+            points[0].indexOf(',') === -1 && points.push(points[1])),
+          j = 1;
         j < points.length;
         j++
       ) {
-        ;(normPoints = points[j].split(','))
+        normPoints = points[j].split(',')
         normPoints.length === 1 && (normPoints[1] = points[j++])
         normPoints.length === 2 &&
-          (
-            (pathLength +=
-              this.normalizeArray(i[0], i[1], normPoints[0], normPoints[1]) ||
-              0),
-            (i = normPoints)
-          )
+          ((pathLength +=
+            this.normalizeArray(i[0], i[1], normPoints[0], normPoints[1]) || 0),
+          (i = normPoints))
       }
     } else {
       check === 'ellipse' &&
-        (
-          (k = parseFloat(el.getAttribute('rx'))),
-          (l = parseFloat(el.getAttribute('ry'))),
-          (pathLength =
-            Math.PI * (3 * (k + l) - Math.sqrt((3 * k + l) * (k + 3 * l))))
-        )
+        ((k = parseFloat(el.getAttribute('rx'))),
+        (l = parseFloat(el.getAttribute('ry'))),
+        (pathLength =
+          Math.PI * (3 * (k + l) - Math.sqrt((3 * k + l) * (k + 3 * l)))))
     }
 
     return new doodleSVG.PathNormalized(el, pathLength)
   }
-  doodleSVG.prototype.normalizeGroup = function (domList) {
+  doodleSVG.prototype.normalizeGroup = function(domList) {
     if (!domList) return 0
     else if (typeof domList !== 'object') return 0
 
     var normalizedArray = []
 
     var that = this
-    ;[].forEach.call(domList, function (item, key) {
+    ;[].forEach.call(domList, function(item, key) {
       var attemptNormalize = that.normalize(item)
       if (item) {
         normalizedArray.push(attemptNormalize)
@@ -92,7 +90,7 @@
     return normalizedArray.length > 0 ? normalizedArray : 0
   }
 
-  doodleSVG.PathNormalized = function (el, pathLength) {
+  doodleSVG.PathNormalized = function(el, pathLength) {
     this.dom = el
     this.pathLength = pathLength
     this.end = 0
@@ -102,10 +100,10 @@
     this.dom.style.strokeDashoffset = '0px'
   }
 
-  doodleSVG.PathNormalized.prototype.drawOrigin = function (origin) {
+  doodleSVG.PathNormalized.prototype.drawOrigin = function(origin) {
     this.dom.style.strokeDashoffset = -(origin * this.pathLength) + 'px'
   }
-  doodleSVG.PathNormalized.prototype.drawEnd = function (end) {
+  doodleSVG.PathNormalized.prototype.drawEnd = function(end) {
     var d =
       this.pathLength * end -
       this.origin * this.pathLength +
@@ -117,22 +115,22 @@
   }
 
   Object.defineProperty(doodleSVG.PathNormalized.prototype, 'origin', {
-    set: function (newVal) {
+    set: function(newVal) {
       this._origin = newVal
       this.drawOrigin(newVal)
     },
-    get: function () {
+    get: function() {
       return this._origin
     }
   })
   Object.defineProperty(doodleSVG.PathNormalized.prototype, 'end', {
-    set: function (newVal) {
+    set: function(newVal) {
       this._end = newVal
       this.drawEnd(newVal)
     },
-    get: function () {
+    get: function() {
       return this._end
     }
   })
   return doodleSVG
-}))
+})
