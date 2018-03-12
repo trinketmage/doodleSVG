@@ -117,7 +117,9 @@
   Object.defineProperty(doodleSVG.PathNormalized.prototype, 'origin', {
     set: function(newVal) {
       this._origin = newVal
-      this.drawOrigin(newVal)
+      requestAnimationFrame(() => {
+        this.drawOrigin(newVal)
+      })
     },
     get: function() {
       return this._origin
@@ -126,7 +128,9 @@
   Object.defineProperty(doodleSVG.PathNormalized.prototype, 'end', {
     set: function(newVal) {
       this._end = newVal
-      this.drawEnd(newVal)
+      requestAnimationFrame(() => {
+        this.drawEnd(newVal)
+      })
     },
     get: function() {
       return this._end
