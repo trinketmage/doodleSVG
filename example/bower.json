@@ -1,7 +1,0 @@
-{
-  "name": "doodleSVG",
-  "version": "0.0.0",
-  "dependencies": {
-    "greensock": "1.13.2"
-  }
-}
