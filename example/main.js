@@ -1,7 +1,7 @@
 (function() {
     var SPN = new doodleSVG();
 
-    var list = document.querySelectorAll("path, rect, polygon, polyline, line, circle");
+    var list = document.querySelectorAll("path, rect, polygon, polyline, line, circle, ellipse");
     var newObjArray = SPN.normalizeGroup(list);
 
     // var el = document.querySelector("path");
