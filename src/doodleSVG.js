@@ -8,8 +8,10 @@
   }
 })(this, function() {
   var doodleSVG = function() {}
-  doodleSVG.prototype.normalizeArray = function(a, b, c, d) {
-    return (c = parseFloat(c) - parseFloat(a))
+  doodleSVG.prototype.normalizeArray = function(x1, y1, x2, y2) {
+    var a = x1 - x2
+    var b = y1 - y2
+    return Math.sqrt(a * a + b * b)
   }
 
   doodleSVG.prototype.normalize = function(el) {
@@ -37,9 +39,7 @@
       let y1 = el.getAttribute('y1')
       let x2 = el.getAttribute('x2')
       let y2 = el.getAttribute('y2')
-      var a = x1 - x2
-      var b = y1 - y2
-      pathLength = Math.sqrt(a * a + b * b)
+      pathLength = this.normalizeArray(x1, y1, x2, y2)
     } else if (check === 'polyline' || check === 'polygon') {
       for (
         points = el
