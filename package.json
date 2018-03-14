@@ -39,5 +39,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Remi Tran <tranremi@live.fr> (https://trinketmage.github.io/)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^1.20.4"
+  }
 }
