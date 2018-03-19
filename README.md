@@ -22,12 +22,6 @@ doodleSVG is a javascript tool, its purpose is to create objects that handle nor
 git clone https://github.com/trinketmage/doodleSVG.git doodleSVG
 ```
 
-## Install package with bower
-
-[![Bower version](https://badge.fury.io/bo/doodleSVG.svg)](https://badge.fury.io/bo/doodleSVG)
-
-$ bower install doodleSVG
-
 ## How to
 
 You can play with origin and end of each return iteration to do your desire doodle.
