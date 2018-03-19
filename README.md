@@ -1,10 +1,10 @@
 # doodleSVG
 
-[![GitHub version](https://badge.fury.io/gh/trinketmage%2FdoodleSVG.svg)](https://badge.fury.io/gh/trinketmage%2FdoodleSVG)
+[![Downloads](https://img.shields.io/npm/dm/doodle-svg.svg)](https://npmcharts.com/compare/doodle-svg?minimal=true)
+[![Version](https://img.shields.io/npm/v/doodle-svg.svg)](https://www.npmjs.com/package/doodle-svg)
+[![License](https://img.shields.io/npm/l/doodle-svg.svg)](https://www.npmjs.com/package/doodle-svg)
 
-* developed at BigBossStudio
-
-doodleSVG is a javascript tool, its purpose is to create objects that handle normalized path (for path, line, circle, rect, ellipse and polygon) from 0 to 1, to easely handle drawing SVG line animation for anytype of SVG object. It can be use with any tween engine. 
+doodleSVG is a javascript tool, its purpose is to create objects that handle normalized path (for path, line, circle, rect, ellipse and polygon) from 0 to 1, to easely handle drawing SVG line animation for anytype of SVG object. It can be use with any tween engine.
 
 ## Inspired by
 
