@@ -104,12 +104,9 @@
     this.dom.style.strokeDashoffset = -(origin * this.pathLength) + 'px'
   }
   doodleSVG.PathNormalized.prototype.drawEnd = function(end) {
-    var d =
-      this.pathLength * end -
-      this.origin * this.pathLength +
-      'px, ' +
-      this.pathLength +
-      'px'
+    var dWidth = this.pathLength * end - this.origin * this.pathLength
+    var d = dWidth + 'px, ' + this.pathLength + 'px'
+    this.dom.style.strokeOpacity = dWidth < 1e-9 ? 0 : 1
     this.dom.style.strokeDasharray = d
     this.path = d
   }
