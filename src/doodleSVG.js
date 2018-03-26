@@ -35,11 +35,7 @@
     } else if (check === 'circle') {
       pathLength = 2 * Math.PI * parseFloat(el.getAttribute('r'))
     } else if (check === 'line') {
-      let x1 = el.getAttribute('x1')
-      let y1 = el.getAttribute('y1')
-      let x2 = el.getAttribute('x2')
-      let y2 = el.getAttribute('y2')
-      pathLength = this.normalizeArray(x1, y1, x2, y2)
+      pathLength = this.normalizeArray(el.getAttribute('x1'), el.getAttribute('y1'), el.getAttribute('x2'), el.getAttribute('y2'))
     } else if (check === 'polyline' || check === 'polygon') {
       for (
         points = el
