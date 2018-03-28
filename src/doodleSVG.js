@@ -75,14 +75,12 @@
     else if (typeof domList !== 'object') return 0
 
     var normalizedArray = []
-
-    var that = this
     ;[].forEach.call(domList, function(item, key) {
-      var attemptNormalize = that.normalize(item)
+      var attemptNormalize = this.normalize(item)
       if (item) {
         normalizedArray.push(attemptNormalize)
       }
-    })
+    }.bind(this))
     return normalizedArray.length > 0 ? normalizedArray : 0
   }
 
@@ -110,9 +108,9 @@
   Object.defineProperty(doodleSVG.PathNormalized.prototype, 'origin', {
     set: function(newVal) {
       this._origin = newVal
-      requestAnimationFrame(() => {
+      requestAnimationFrame(function() {
         this.drawOrigin(newVal)
-      })
+      }.bind(this))
     },
     get: function() {
       return this._origin
@@ -121,9 +119,9 @@
   Object.defineProperty(doodleSVG.PathNormalized.prototype, 'end', {
     set: function(newVal) {
       this._end = newVal
-      requestAnimationFrame(() => {
+      requestAnimationFrame(function() {
         this.drawEnd(newVal)
-      })
+      }.bind(this))
     },
     get: function() {
       return this._end
